@@ -1,0 +1,9 @@
+!! If spreadsheet not conect with esp, we Recomended you, Create Code ESP8266 Board In Version 2.6.3 !!
+
+Library include in this project
+---------------------------------------------<>_____________________________________________
+NTPClient                                    = https://github.com/arduino-libraries/NTPClient
+MFRC522 (for rfid type mfrc522)              = https://github.com/miguelbalboa/rfid
+Adafruit_GFX                                 = https://github.com/adafruit/Adafruit-GFX-Library
+Adafruit SSD1306 (for adafruit oled ssd1306) = https://github.com/adafruit/Adafruit_SSD1306
+WifiManager (for connect rfid to wifi)       = https://github.com/tzapu/WiFiManager
