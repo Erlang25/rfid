@@ -24,8 +24,8 @@ const char* fingerprint  = "46 B2 C3 44 9C 59 09 8B 01 B6 F8 BD 4C FB 00 74 91 2
 
 
 //***********Things to change*******************
-String GOOGLE_SCRIPT_ID = "AKfycbxeXN2YSEeeRntnvSX6oNtPUhLxjjiLcMMp8fdUPyKqKs3G3dj4731qNdThDqBtJdfd"; // Replace by your GAS service id
-const String unitName = "Technopark"; // any name without spaces and special characters
+String GOOGLE_SCRIPT_ID = "AKfycbxeXN2YSEeeRntnvSX6oNtPUhLxjjiLcMMp8fdUPyKqKs3G3dj4731qNdThDqBtJdfd"; // google script ic
+const String unitName = "Technopark"; // nama ruangan
 //***********Things to change*******************
 uint64_t openGateMillis = 0;
 WiFiClientSecure client;
