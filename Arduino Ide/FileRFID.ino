@@ -8,7 +8,9 @@
 #include <WiFiUdp.h>
 #include <WiFiManager.h>
 #include <ESP8266WebServer.h>
+#include <Servo.h>
 
+Servo myservo;
 #define SS_PIN D4
 #define RST_PIN D3    // Configurable, see typical pin layout above
 #define OLED_RESET LED_BUILTIN //4
@@ -17,7 +19,7 @@ int ledPin = 15;
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);  // Create MFRC522 instance
 #define BUZZ_PIN D8
-#define GATE_PIN D0
+#define GATE_PIN D0 //servo pin
 const char* host = "script.google.com";
 const int httpsPort = 443;
 const char* fingerprint  = "46 B2 C3 44 9C 59 09 8B 01 B6 F8 BD 4C FB 00 74 91 2F EF F6"; // for https
@@ -89,6 +91,7 @@ void Beep2()
 void setup() {
 
   WiFiManager wm;
+    myservo.attach(GATE_PIN);
     wm.resetSettings();
     bool res;
     res = wm.autoConnect("Rfid System");
@@ -194,8 +197,8 @@ void HandleDataFromGoogle(String data)
 
 void OpenGate()
 {
-  openGateMillis = millis()+1000;
-  digitalWrite(GATE_PIN, HIGH);
+  openGateMillis = millis()+3000;
+  myservo.write(90);
   Beep();
   delay(100);
   Beep();
@@ -204,7 +207,7 @@ void OpenGate()
 void CloseGate()
 {
   openGateMillis = 0;
-  digitalWrite(GATE_PIN, LOW);
+  myservo.write(0);
   Beep2();
   LcdClearAndPrint("Ready");
 }
