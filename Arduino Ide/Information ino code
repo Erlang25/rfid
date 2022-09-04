@@ -7,3 +7,4 @@ MFRC522 (for rfid type mfrc522)              = https://github.com/miguelbalboa/r
 Adafruit_GFX                                 = https://github.com/adafruit/Adafruit-GFX-Library
 Adafruit SSD1306 (for adafruit oled ssd1306) = https://github.com/adafruit/Adafruit_SSD1306
 WifiManager (for connect rfid to wifi)       = https://github.com/tzapu/WiFiManager
+servo
